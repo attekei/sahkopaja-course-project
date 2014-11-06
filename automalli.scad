@@ -1,4 +1,4 @@
-/*module springTrigger(minRadius, maxRadius, vertexCount, startPoint, height) {
+module springTrigger(minRadius, maxRadius, vertexCount, startPoint, height) {
 	function vertexAt(vertexIndex) = 
 		let(fraction = vertexIndex / vertexCount)
 		let(angle = fraction * 360) 
@@ -11,41 +11,50 @@
 	vertices = [for (i = range) vertexAt(i)];
 
 	linear_extrude(height = height) polygon(points=vertices, paths=[path]);
-}*/
+}
 
-/*module drawSpring() {
+module drawSpring() {
 	springTrigger(5,17, 500, 50, 8);
-}*/
+}
+
+module drawTireScrewHole() {
+	cylinder(h = 4, r=1.5, center=true, $fn = 20);
+}
+
+module drawSimpleTireCylinder() {
+	difference() {
+		cylinder(h = 3, r=30, center=true);
+		translate([15, 15, 0]) drawTireScrewHole();
+		translate([15, -15, 0]) drawTireScrewHole();
+		translate([-15, 15, 0]) drawTireScrewHole();
+		translate([-15, -15, 0]) drawTireScrewHole();
+	}
+}
+
+module drawInnerTireCylinder() {
+	difference() {
+		drawSimpleTireCylinder();	
+		translate([0, 0, 2]) cube([4.2,5.9,5], center = true);
+		drawTireScrewHole();
+	}
+
+	
+	difference() {
+		translate ([0, 0, 2])cylinder(h = 6, r=10, center=true);
+		cube([4.2,5.9,15], center = true);
+	}
+}
+
+module drawOuterTireCylinder() {
+	drawSimpleTireCylinder();
+}
 
 module drawTire() {
 	tireWidth = 40;
-	//cylinder(h = tireWidth, r=51, center=true);
-	color([1,0,0]) translate([0, 0, tireWidth / 2]) {
-		difference() {
-			cylinder(h = 3, r=30, center=true);
-			translate([15, 15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([15, -15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([-15, 15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([-15, -15, 0]) cylinder(h = 4, r=1.5, center=true);
-			cube([3.7,5.4,5], center = true);
-			
-		}
-		
-		difference() {
-			translate ([0, 0, 2])cylinder(h = 6, r=10, center=true);
-			cube([3.7,5.4,15], center = true);
-		}
-	}
 	
-	/*color([1,0,0]) translate([0, 0, -tireWidth / 2]) {
-		difference() {
-			cylinder(h = 3, r=30, center=true);
-			translate([15, 15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([15, -15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([-15, 15, 0]) cylinder(h = 4, r=1.5, center=true);
-			translate([-15, -15, 0]) cylinder(h = 4, r=1.5, center=true);	
-		}
-	}*/
+	//cylinder(h = tireWidth, r=51, center=true);
+	color([1,0,0]) translate([0, 0, tireWidth / 2]) drawInnerTireCylinder();
+	color([1,0,0]) translate([0, 0, -tireWidth / 2]) drawOuterTireCylinder();
 }
 
 drawTire();
@@ -57,7 +66,7 @@ module drawAllParts() {
 	translate([0,-tireDistance,0]) rotate([90,90,0]) mirror([0,0,1]) drawTire();
 	translate([0,tireDistance,0]) rotate([90,90,0]) drawTire();
 	
-	//drawTheRest();
+	drawTheRest();
 }
 
 //drawAllParts();

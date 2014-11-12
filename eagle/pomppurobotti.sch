@@ -426,8 +426,9 @@ W = angled&lt;p&gt;
 </net>
 <net name="MOSI" class="0">
 <segment>
-<wire x1="55.88" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
 <label x="35.56" y="45.72" size="1.778" layer="95"/>
+<pinref part="SV1" gate="1" pin="4"/>
 </segment>
 <segment>
 <pinref part="SV3" gate="1" pin="5"/>

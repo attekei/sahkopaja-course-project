@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -260,7 +260,7 @@ W = angled&lt;p&gt;
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="default *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -278,12 +278,12 @@ design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="8mil"/>
-<param name="mdWirePad" value="8mil"/>
-<param name="mdWireVia" value="8mil"/>
-<param name="mdPadPad" value="8mil"/>
-<param name="mdPadVia" value="8mil"/>
-<param name="mdViaVia" value="8mil"/>
+<param name="mdWireWire" value="10mil"/>
+<param name="mdWirePad" value="10mil"/>
+<param name="mdWireVia" value="10mil"/>
+<param name="mdPadPad" value="10mil"/>
+<param name="mdPadVia" value="10mil"/>
+<param name="mdViaVia" value="10mil"/>
 <param name="mdSmdPad" value="8mil"/>
 <param name="mdSmdVia" value="8mil"/>
 <param name="mdSmdSmd" value="8mil"/>
@@ -440,30 +440,32 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="SV1" library="con-lstb" package="MA12-1" value="" x="52.07" y="36.83">
-<attribute name="OC_NEWARK" value="unknown" x="52.07" y="36.83" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="52.07" y="36.83" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="52.07" y="36.83" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="52.07" y="36.83" size="1.778" layer="27" display="off"/>
+<element name="SV1" library="con-lstb" package="MA12-1" value="" x="44.45" y="52.07">
+<attribute name="OC_NEWARK" value="unknown" x="44.45" y="52.07" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="44.45" y="52.07" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="44.45" y="52.07" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="44.45" y="52.07" size="1.778" layer="27" display="off"/>
 </element>
-<element name="SV2" library="con-lstb" package="MA12-1" value="" x="74.93" y="22.86">
-<attribute name="OC_NEWARK" value="unknown" x="74.93" y="22.86" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="74.93" y="22.86" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="74.93" y="22.86" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="74.93" y="22.86" size="1.778" layer="27" display="off"/>
+<element name="SV2" library="con-lstb" package="MA12-1" value="" x="44.45" y="67.31" rot="R180">
+<attribute name="OC_NEWARK" value="unknown" x="44.45" y="67.31" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="" x="44.45" y="67.31" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="" x="44.45" y="67.31" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="44.45" y="67.31" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="SV3" library="con-lstb" package="MA08-1" value="" x="54.61" y="52.07">
-<attribute name="OC_NEWARK" value="unknown" x="54.61" y="52.07" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="54.61" y="52.07" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="54.61" y="52.07" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="54.61" y="52.07" size="1.778" layer="27" display="off"/>
+<element name="SV3" library="con-lstb" package="MA08-1" value="" x="39.37" y="38.1">
+<attribute name="OC_NEWARK" value="unknown" x="39.37" y="38.1" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="39.37" y="38.1" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="39.37" y="38.1" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="39.37" y="38.1" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="GND">
 <contactref element="SV3" pad="2"/>
 <contactref element="SV1" pad="1"/>
-<wire x1="38.1" y1="36.83" x2="48.26" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="30.48" y1="52.07" x2="30.48" y2="43.18" width="0.6096" layer="16"/>
+<wire x1="30.48" y1="43.18" x2="33.02" y2="40.64" width="0.6096" layer="16"/>
+<wire x1="33.02" y1="40.64" x2="33.02" y2="38.1" width="0.6096" layer="16"/>
 </signal>
 <signal name="0">
 <contactref element="SV1" pad="2"/>
@@ -471,12 +473,20 @@ design rules under a new name.</description>
 <signal name="SCLK">
 <contactref element="SV1" pad="3"/>
 <contactref element="SV3" pad="3"/>
-<wire x1="43.18" y1="36.83" x2="50.8" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="35.56" y1="52.07" x2="35.56" y2="38.1" width="0.6096" layer="16"/>
 </signal>
 <signal name="MISO">
 <contactref element="SV3" pad="4"/>
 <contactref element="SV1" pad="5"/>
-<wire x1="48.26" y1="36.83" x2="53.34" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="40.64" y1="52.07" x2="40.64" y2="53.34" width="0.6096" layer="16"/>
+<wire x1="40.64" y1="53.34" x2="43.18" y2="55.88" width="0.6096" layer="16"/>
+<wire x1="43.18" y1="55.88" x2="60.96" y2="55.88" width="0.6096" layer="16"/>
+<wire x1="60.96" y1="55.88" x2="63.5" y2="53.34" width="0.6096" layer="16"/>
+<wire x1="63.5" y1="53.34" x2="63.5" y2="35.56" width="0.6096" layer="16"/>
+<wire x1="38.1" y1="38.1" x2="38.1" y2="35.56" width="0.6096" layer="16"/>
+<wire x1="38.1" y1="35.56" x2="40.64" y2="33.02" width="0.6096" layer="16"/>
+<wire x1="40.64" y1="33.02" x2="60.96" y2="33.02" width="0.6096" layer="16"/>
+<wire x1="60.96" y1="33.02" x2="63.5" y2="35.56" width="0.6096" layer="16"/>
 </signal>
 <signal name="+3.3V">
 <contactref element="SV3" pad="8"/>
@@ -493,7 +503,11 @@ design rules under a new name.</description>
 <signal name="+5V">
 <contactref element="SV2" pad="12"/>
 <contactref element="SV3" pad="1"/>
-<wire x1="45.72" y1="52.07" x2="88.9" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="30.48" y1="67.31" x2="30.48" y2="63.5" width="0.6096" layer="16"/>
+<wire x1="30.48" y1="63.5" x2="27.94" y2="60.96" width="0.6096" layer="16"/>
+<wire x1="27.94" y1="60.96" x2="27.94" y2="43.18" width="0.6096" layer="16"/>
+<wire x1="27.94" y1="43.18" x2="30.48" y2="40.64" width="0.6096" layer="16"/>
+<wire x1="30.48" y1="40.64" x2="30.48" y2="38.1" width="0.6096" layer="16"/>
 </signal>
 <signal name="N$14">
 <contactref element="SV2" pad="11"/>
@@ -548,6 +562,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="MOSI">
 <contactref element="SV3" pad="5"/>
+<contactref element="SV1" pad="4"/>
+<wire x1="40.64" y1="38.1" x2="38.1" y2="52.07" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

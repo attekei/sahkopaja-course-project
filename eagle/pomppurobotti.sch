@@ -125,6 +125,9 @@
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<description>dsdsdsds
+sddsdsdsds
+sddsds</description>
 <libraries>
 <library name="SparkFun-Connectors">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
@@ -9508,7 +9511,11 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 <parts>
 <part name="TEENSY_2" library="SparkFun-Connectors" deviceset="M12" device="PTH"/>
 <part name="TEENSY_1" library="SparkFun-Connectors" deviceset="M12" device="PTH"/>
-<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device=""/>
+<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-A4L" device="">
+<attribute name="CNAME" value="Sähköpaja, pomppurobotin PCB"/>
+<attribute name="CREVISION" value="23.11.14"/>
+<attribute name="DESIGNER" value="Atte Keinänen"/>
+</part>
 <part name="IC1" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="-TO-220"/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="POWER_JACK" device="1"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -9547,6 +9554,9 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 </parts>
 <sheets>
 <sheet>
+<description>sdssd
+dsds
+dssd</description>
 <plain>
 <text x="170.18" y="-2.54" size="1.778" layer="97" rot="R90">TEENSY 2.0 USB -&gt;</text>
 <text x="162.56" y="-40.64" size="1.778" layer="97" rot="R180">RADIO
@@ -9569,7 +9579,11 @@ PINS</text>
 <instances>
 <instance part="TEENSY_2" gate="G$1" x="177.8" y="10.16"/>
 <instance part="TEENSY_1" gate="G$1" x="162.56" y="7.62" rot="R180"/>
-<instance part="FRAME1" gate="G$1" x="33.02" y="-68.58"/>
+<instance part="FRAME1" gate="G$1" x="33.02" y="-68.58">
+<attribute name="CNAME" x="33.02" y="-68.58" size="1.778" layer="96" display="off"/>
+<attribute name="DESIGNER" x="33.02" y="-68.58" size="1.778" layer="96" display="off"/>
+<attribute name="CREVISION" x="33.02" y="-68.58" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="IC1" gate="G$1" x="121.92" y="55.88"/>
 <instance part="JP1" gate="G$1" x="104.14" y="48.26"/>
 <instance part="GND1" gate="1" x="121.92" y="35.56"/>

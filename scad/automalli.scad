@@ -52,24 +52,24 @@ module drawOuterTireCylinder() {
 module drawTire() {
 	tireWidth = 40;
 	
-	//cylinder(h = tireWidth, r=51, center=true);
+	cylinder(h = tireWidth, r=51, center=true);
 	color([1,0,0]) translate([0, 0, tireWidth / 2]) drawInnerTireCylinder();
 	color([1,0,0]) translate([0, 0, -tireWidth / 2]) drawOuterTireCylinder();
 }
 
-drawTire();
+//drawTire();
 
 module drawAllParts() {
 	color([1,1,1]) translate([0,27,0]) rotate([90,90,0]) drawSpring();
 	
-	tireDistance = 90;
+	tireDistance = 120;
 	translate([0,-tireDistance,0]) rotate([90,90,0]) mirror([0,0,1]) drawTire();
 	translate([0,tireDistance,0]) rotate([90,90,0]) drawTire();
 	
 	drawTheRest();
 }
 
-//drawAllParts();
+drawAllParts();
 
 // Moottorin kotelon leveä sivu: 22,5mm
 // Moottorin kotelon pituus: 64,27mm
@@ -99,7 +99,7 @@ module drawTheRest() {
 
 		translate([0,0,-7]) {
 			difference() {
-				cube(size = [50,100,2], center = true);
+				cube(size = [80,150,2], center = true);
 				translate([0,23,0]) cube([35,12,4], center = true);
 			}
 			
@@ -111,7 +111,7 @@ module drawTheRest() {
 			translate([0,-20,2]) cube(size = [30.5,17.8,3], center = true);
 			
 			// Battery
-			translate([0,-20,-6]) cube(size = [40,60,10], center = true);
+			translate([10,-20,-6]) cube(size = [31,60,16], center = true);
 			
 			// Spring servo
 			translate([0,5,6]) cube(size = [20,20,10], center = true);

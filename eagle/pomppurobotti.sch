@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -9517,7 +9517,7 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 <attribute name="DESIGNER" value="Atte Keinänen"/>
 </part>
 <part name="IC1" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="-TO-220"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="POWER_JACK" device="1"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH" value="POWER_JACKPTH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -9551,6 +9551,7 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="RV1" library="SparkFun-Electromechanical" deviceset="POT" device="TRIM"/>
+<part name="POWER_INPUT_2" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -9567,14 +9568,17 @@ MOTOR DRIVER
 TB6612FNG</text>
 <text x="160.02" y="53.34" size="1.778" layer="91">ACCELOMETER
 ADXL335</text>
-<text x="93.98" y="63.5" size="1.778" layer="91">POWER SOURCE,
+<text x="93.98" y="63.5" size="1.778" layer="91">POWER SOURCE (JACK OR HEADER),
 5V VOLTAGE REGULATOR </text>
 <text x="220.98" y="-15.24" size="1.778" layer="91">PIEZO ELEMENT
 PKM17EPP-4001-B0</text>
 <text x="200.66" y="53.34" size="1.778" layer="91">RANGE FINDER
-MAXSONAR-EZ1</text>
+MAXSONAR-EZ1
+(5 OF 7 PINS)</text>
 <text x="238.76" y="5.08" size="1.778" layer="91">EXTRA
 PINS</text>
+<circle x="127" y="-5.08" radius="5.6796125" width="0.1524" layer="91"/>
+<circle x="121.92" y="54.61" radius="7.184203125" width="0.1524" layer="91"/>
 </plain>
 <instances>
 <instance part="TEENSY_2" gate="G$1" x="177.8" y="10.16"/>
@@ -9585,7 +9589,7 @@ PINS</text>
 <attribute name="CREVISION" x="33.02" y="-68.58" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="IC1" gate="G$1" x="121.92" y="55.88"/>
-<instance part="JP1" gate="G$1" x="104.14" y="48.26"/>
+<instance part="JP1" gate="G$1" x="88.9" y="48.26"/>
 <instance part="GND1" gate="1" x="121.92" y="35.56"/>
 <instance part="SUPPLY3" gate="G$1" x="182.88" y="-53.34" rot="R270"/>
 <instance part="SUPPLY1" gate="G$1" x="195.58" y="25.4"/>
@@ -9623,6 +9627,7 @@ PINS</text>
 <instance part="SUPPLY8" gate="G$1" x="220.98" y="-38.1" rot="R270"/>
 <instance part="GND8" gate="1" x="203.2" y="-38.1" rot="R270"/>
 <instance part="RV1" gate="G$1" x="213.36" y="-38.1" rot="R90"/>
+<instance part="POWER_INPUT_2" gate="G$1" x="96.52" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -9643,8 +9648,9 @@ PINS</text>
 <wire x1="121.92" y1="48.26" x2="121.92" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="GND"/>
 <wire x1="121.92" y1="43.18" x2="111.76" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="43.18" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="43.18" x2="106.68" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="43.18" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="43.18" x2="91.44" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="43.18" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
 <junction x="121.92" y="43.18"/>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -9657,6 +9663,9 @@ PINS</text>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="132.08" y1="43.18" x2="134.62" y2="43.18" width="0.1524" layer="91"/>
 <junction x="132.08" y="43.18"/>
+<pinref part="POWER_INPUT_2" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="48.26" x2="104.14" y2="43.18" width="0.1524" layer="91"/>
+<junction x="104.14" y="43.18"/>
 </segment>
 <segment>
 <wire x1="119.38" y1="7.62" x2="114.3" y2="7.62" width="0.1524" layer="91"/>
@@ -9866,11 +9875,15 @@ PINS</text>
 <segment>
 <pinref part="JP1" gate="G$1" pin="PWR"/>
 <pinref part="IC1" gate="G$1" pin="IN"/>
-<wire x1="106.68" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="55.88" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="53.34" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
 <junction x="111.76" y="55.88"/>
 <pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="POWER_INPUT_2" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="50.8" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+<junction x="104.14" y="55.88"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -10073,8 +10086,11 @@ PINS</text>
 <approved hash="208,1,127,0,VCC,sup,,,,"/>
 <approved hash="208,1,210.82,-7.62,VCC,sup,,,,"/>
 <approved hash="208,1,195.58,25.4,VCC,sup,,,,"/>
+<approved hash="208,1,175.26,33.02,VCC,sup,,,,"/>
+<approved hash="208,1,210.82,33.02,VCC,sup,,,,"/>
 <approved hash="208,1,129.54,55.88,VCC,out,,,,"/>
 <approved hash="208,1,132.08,55.88,VCC,sup,,,,"/>
+<approved hash="208,1,220.98,-38.1,VCC,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>

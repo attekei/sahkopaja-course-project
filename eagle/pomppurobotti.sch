@@ -6946,6 +6946,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="V_BATT">
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="V_BATT" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-A4L" prefix="FRAME">
@@ -6980,6 +6986,20 @@ Standard A4 size frame in Landscape</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="V_BATT" prefix="SUPPLY">
+<description>&lt;b&gt;V_BATT&lt;/b&gt;&lt;br&gt;
+Generic symbol for the battery input to a system.</description>
+<gates>
+<gate name="G$1" symbol="V_BATT" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -9533,7 +9553,6 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3" value="220Ω"/>
 <part name="LED2" library="SparkFun-LED" deviceset="LED" device="5MM" value="RED"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SPRING_PINS" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH"/>
@@ -9552,6 +9571,9 @@ Source: Panbasonic .. 2SC1685.pdf</description>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="RV1" library="SparkFun-Electromechanical" deviceset="POT" device="TRIM"/>
 <part name="POWER_INPUT_2" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
+<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
+<part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9605,7 +9627,6 @@ PINS</text>
 <instance part="R2" gate="G$1" x="195.58" y="-10.16" rot="R270"/>
 <instance part="LED2" gate="G$1" x="195.58" y="-17.78"/>
 <instance part="GND2" gate="1" x="195.58" y="-25.4"/>
-<instance part="SUPPLY4" gate="G$1" x="127" y="0"/>
 <instance part="SPRING_PINS" gate="G$1" x="129.54" y="-25.4" rot="R90"/>
 <instance part="GND3" gate="1" x="129.54" y="-12.7" rot="R180"/>
 <instance part="S1" gate="G$1" x="205.74" y="-2.54" smashed="yes">
@@ -9628,6 +9649,9 @@ PINS</text>
 <instance part="GND8" gate="1" x="203.2" y="-38.1" rot="R270"/>
 <instance part="RV1" gate="G$1" x="213.36" y="-38.1" rot="R90"/>
 <instance part="POWER_INPUT_2" gate="G$1" x="96.52" y="48.26"/>
+<instance part="SUPPLY9" gate="G$1" x="104.14" y="55.88"/>
+<instance part="SUPPLY4" gate="G$1" x="127" y="0"/>
+<instance part="SUPPLY10" gate="G$1" x="83.82" y="25.4" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9871,21 +9895,6 @@ PINS</text>
 <wire x1="137.16" y1="7.62" x2="152.4" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="JP1" gate="G$1" pin="PWR"/>
-<pinref part="IC1" gate="G$1" pin="IN"/>
-<wire x1="91.44" y1="55.88" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="53.34" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
-<junction x="111.76" y="55.88"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<pinref part="POWER_INPUT_2" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="50.8" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
-<junction x="104.14" y="55.88"/>
-</segment>
-</net>
 <net name="VCC" class="0">
 <segment>
 <wire x1="175.26" y1="-53.34" x2="182.88" y2="-53.34" width="0.1524" layer="91"/>
@@ -9896,10 +9905,6 @@ PINS</text>
 <wire x1="83.82" y1="22.86" x2="78.74" y2="22.86" width="0.1524" layer="91"/>
 <label x="83.82" y="22.86" size="1.778" layer="95" rot="R180"/>
 <pinref part="MOTORD_L" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="2"/>
@@ -9916,11 +9921,6 @@ PINS</text>
 <pinref part="ACCELOM" gate="G$1" pin="6"/>
 <pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
 <wire x1="175.26" y1="33.02" x2="175.26" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="83.82" y1="25.4" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
-<label x="83.82" y="25.4" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOTORD_L" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="114.3" y1="17.78" x2="119.38" y2="17.78" width="0.1524" layer="91"/>
@@ -10078,6 +10078,30 @@ PINS</text>
 <pinref part="TEENSY_1" gate="G$1" pin="12"/>
 <wire x1="152.4" y1="-5.08" x2="144.78" y2="-5.08" width="0.1524" layer="91"/>
 <label x="144.78" y="-5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="V_BATT" class="0">
+<segment>
+<pinref part="JP1" gate="G$1" pin="PWR"/>
+<pinref part="IC1" gate="G$1" pin="IN"/>
+<wire x1="91.44" y1="55.88" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="55.88" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="53.34" x2="111.76" y2="55.88" width="0.1524" layer="91"/>
+<junction x="111.76" y="55.88"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="POWER_INPUT_2" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="50.8" x2="104.14" y2="55.88" width="0.1524" layer="91"/>
+<junction x="104.14" y="55.88"/>
+<pinref part="SUPPLY9" gate="G$1" pin="V_BATT"/>
+</segment>
+<segment>
+<pinref part="Q1" gate="G$1" pin="S"/>
+<pinref part="SUPPLY4" gate="G$1" pin="V_BATT"/>
+</segment>
+<segment>
+<pinref part="MOTORD_L" gate="G$1" pin="1"/>
+<pinref part="SUPPLY10" gate="G$1" pin="V_BATT"/>
 </segment>
 </net>
 </nets>

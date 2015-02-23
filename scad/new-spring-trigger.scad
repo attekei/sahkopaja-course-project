@@ -34,4 +34,4 @@ module drawSpring() {
 	}
 }
 
-drawSpring();
+scale(1.2) drawSpring();

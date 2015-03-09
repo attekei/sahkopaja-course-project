@@ -1,23 +1,25 @@
-module outline() {
-    translate([-5, -5,0]) cube([10,10,55], [0,0]);
+module hole() {
+    translate([0, -35, -2])
+    cylinder(7,2,2, [0,0]);
 }
 
-module inside(){
-    translate([0, 0, -1])
-    cylinder(50,3,3, [0,0]);
+module sylinder(){
+    translate([0, 35, 3])
+    cylinder(5,3,3, [0,0]);
 }
 
-module hold(){
-    translate([-15, -5, 20]) cube([30,2,15], [0,0]);
-
+module upperpart(){
+    translate([-7, -40, 0])
+    cube([14,80,3], [0,0]);
 }
 
 difference(){
-    outline();
-    inside();
+    upperpart();
+    hole();
 }
 
-hold();
+
+sylinder();
 
 
 

@@ -8,7 +8,7 @@ widerHeight = totalHeight - narrowHeight - transitionHeight;
 hitterHeight = 15;
 screwHoleRadius = 4;
 screwHoleHeight = 3;
-otherHoleRadius = 2;
+otherHoleRadius = 1.5;
 
 difference() {
 	bjong();

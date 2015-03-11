@@ -8,7 +8,7 @@ module inside(){
 }
 
 module hold(){
-    translate([-15, -6, 20]) cube([30,2,15], [0,0]);
+    translate([-12, -6, 20]) cube([24,2,15], [0,0]);
 
 }
 

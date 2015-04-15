@@ -42,7 +42,7 @@ module pipesAndBar() {
 module differenceShape() {
 	squareWidth = 2 * narrowR + 2;
 	extrudeHeight = totalWidth + 6;
-	translate([0,extrudeHeight / 2,-narrowR * 2 - narrowR + 1]) rotate([90, 180, 0]) linear_extrude(height = extrudeHeight) difference() {
+	translate([0,extrudeHeight / 2,-narrowR * 2 - narrowR + 3]) rotate([90, 180, 0]) linear_extrude(height = extrudeHeight) difference() {
 
 		translate([-squareWidth / 2,0]) square([squareWidth, narrowR + 2]);
 		circle(narrowR, $fn = 120);

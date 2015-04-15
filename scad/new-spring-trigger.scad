@@ -24,7 +24,7 @@ module drawSpring() {
 		}
 		
 		difference() {
-			springTrigger(12,30, 500, 65, 8);
+			springTrigger(12,30, 500, 65, 9);
 			translate([0, 0, 3]) springTrigger(8.5,26.5, 500, 65, 8);
 			translate([4.4, -0.8, 0]) cylinder(h = 2, r=0.75, center=true, $fn = 20);
 		}

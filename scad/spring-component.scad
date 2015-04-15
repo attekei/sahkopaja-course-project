@@ -19,7 +19,7 @@ difference() {
 }
 
 module screw() {
-		
+	cylinder(h = screwHoleHeight, r=screwHoleRadius, center=true, $fn = 80);
 }
 
 module hexagon(size, height) {

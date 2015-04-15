@@ -2,24 +2,24 @@ totalHeight = 40;
 widerR = 6;
 transitionHeight = 2;
 totalWidth = 50;
-narrowR = 4;
+narrowR = 4.5;
 narrowHeight = 30;
 widerHeight = totalHeight - narrowHeight - transitionHeight;
 hitterHeight = 15;
-screwHoleRadius = 4;
-screwHoleHeight = 3;
+screwHoleRadius = 3.3;
+screwHoleHeight = 35;
 otherHoleRadius = 1.5;
 
 difference() {
-	bjong();
+	pipesAndBar();
 	differenceShape();
 	translate([0,-(totalWidth - narrowR) / 2,narrowHeight / 2 + transitionHeight + widerHeight - screwHoleHeight / 2]) screw();
-	translate([0,(totalWidth - narrowR) / 2,narrowHeight / 2 + transitionHeight + widerHeight - screwHoleHeight / 2]) screw();
 	translate([0,0,-4.5]) rotate([0,90,0]) cylinder(h = 2 * narrowR + 2, r=otherHoleRadius, center=true, $fn = 80);
+		translate([0,(totalWidth - narrowR) / 2,narrowHeight / 2 + transitionHeight + widerHeight - screwHoleHeight / 2]) screw();
 }
 
 module screw() {
-	 hexagon(2 * screwHoleRadius, screwHoleHeight + 1);	
+	cylinder(h = screwHoleHeight, r=screwHoleRadius, center=true, $fn = 80);
 }
 
 module hexagon(size, height) {
@@ -33,7 +33,7 @@ module bar() {
 	translate([0,0,narrowHeight / 2 + transitionHeight + widerHeight / 2]) cylinder(h = widerHeight, r=widerR, center=true, $fn = 80);
 }
 
-module bjong() {
+module pipesAndBar() {
 	translate([0,(totalWidth - narrowR) / 2,0]) bar();
 	translate([0,-(totalWidth - narrowR) / 2,0]) bar();
 	translate([0, 0, -narrowHeight / 2 + hitterHeight / 2]) cube([2 * narrowR, totalWidth - narrowR, hitterHeight], center=true) bar();

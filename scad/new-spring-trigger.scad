@@ -16,16 +16,16 @@ module springTrigger(minRadius, maxRadius, vertexCount, startPoint, height) {
 
 module drawSpring() {
 	union() {
-		color([1,0,0]) translate([4.4, -0.8, 0.5]) {
+		color([1,0,0]) translate([4.4, -0.8, 1]) {
 			difference() {
-				cylinder(h = 1, r=26.5, center=true, $fn = 50);
-				cylinder(h = 1.2, r=22.5, center=true, $fn = 50);
+				cylinder(h = 2, r=26.5, center=true, $fn = 50);
+				cylinder(h = 2.2, r=22.5, center=true, $fn = 50);
 			}
 		}
 		
 		difference() {
 			springTrigger(12,30, 500, 65, 8);
-			translate([0, 0, 2]) springTrigger(9,27, 500, 65, 8);
+			translate([0, 0, 3]) springTrigger(8.5,26.5, 500, 65, 8);
 			translate([4.4, -0.8, 0]) cylinder(h = 2, r=0.75, center=true, $fn = 20);
 		}
 		

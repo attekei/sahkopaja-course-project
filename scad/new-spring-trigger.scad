@@ -29,7 +29,7 @@ module drawSpring() {
 			translate([4.4, -0.8, 0]) cylinder(h = 2, r=0.75, center=true, $fn = 20);
 		}
 		
-		translate([12, 0, 0]) rotate([0, 0, -5]) cube([18, 4, 8]);
+		translate([12, 0, 0]) rotate([0, 0, -5]) cube([17.9, 4, 9]);
 		
 	}
 }
